@@ -1,43 +1,23 @@
-import Directory from './components/directory/directory';
+import Home from './routes/home/home.component';
+import MainLayout from './routes/main-layout/main-layout.component.jsx';
+import { Routes, Route } from 'react-router-dom';
+// import './App.scss';
 
-import './App.scss';
+const Shop = () => {
+  return (
+    <h1>Shop page</h1>
+  );
+}
 
 const App = () => {
-
-  const categories = [
-    {
-      id: 1,
-      title: 'Hats',
-      description: 'Shop Now',
-      imageURL: "https://i.ibb.co/cvpntL1/hats.png",
-    },
-    {
-      id: 2,
-      title: 'Jackets',
-      description: 'Shop Now',
-      imageURL: "https://i.ibb.co/px2tCc3/jackets.png",
-    },
-    {
-      id: 3,
-      title: 'Sneakers',
-      description: 'Shop Now',
-      imageURL: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    },
-    {
-      id: 4,
-      title: 'Women\'s',
-      description: 'Shop Now',
-      imageURL: "https://i.ibb.co/GCCdy8t/womens.png",
-    },
-    {
-      id: 5,
-      title: 'Men\'s',
-      description: 'Shop Now',
-      imageURL: "https://i.ibb.co/R70vBrQ/men.png",
-    },
-  ];
-
-  return <Directory categories={categories} />;
+  return (
+    <Routes>
+      <Route path='/' element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path='/shop' element={<Shop />} />
+      </Route>
+    </Routes>
+  );
 }
 
 export default App;
