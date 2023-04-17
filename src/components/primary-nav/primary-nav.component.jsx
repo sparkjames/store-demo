@@ -13,9 +13,15 @@ const PrimaryNavigation = () => {
       </div>
 
       <ul className="primaryNav-list">
+
         <li className="primaryNav-item">
           <Link className="primaryNav-link" to="/shop">Shop</Link>
         </li>
+
+        <li className="primaryNav-item">
+          <Link className="primaryNav-link" to="/sign-in">Sign In</Link>
+        </li>
+
       </ul>
 
     </nav>
