@@ -19,7 +19,7 @@ const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password1, password2 } = formFields;
 
-  console.log('formFields = ', formFields);
+  // console.log('formFields = ', formFields);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -41,7 +41,7 @@ const SignUpForm = () => {
     try {
 
       const { user } = await createAuthUserWithEmailAndPassword(email, password1);
-      console.log(user);
+      // console.log(user);
 
       await createUserDocumentFromAuth(user, {displayName});
       resetFormFields();
@@ -73,8 +73,8 @@ const SignUpForm = () => {
 
         <FormInput label="Confirm Password" id="signUpForm-password2" type="password" name="password2" value={password2} onChange={handleChange} required />
 
-        <div className="signUpForm-fieldGroup">
-          <Button type="submit" buttonModifier="highlight">Sign In</Button>
+        <div className="signUpForm-fieldGroup signUpForm-actions">
+          <Button type="submit" buttonModifier="highlight">Register</Button>
         </div>
 
       </form>

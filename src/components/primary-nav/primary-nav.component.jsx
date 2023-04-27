@@ -19,7 +19,7 @@ const PrimaryNavigation = () => {
         </li>
 
         <li className="primaryNav-item">
-          <Link className="primaryNav-link" to="/sign-in">Sign In</Link>
+          <Link className="primaryNav-link" to="/auth">Sign In</Link>
         </li>
 
       </ul>

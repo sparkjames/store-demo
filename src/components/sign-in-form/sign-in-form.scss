@@ -1,0 +1,25 @@
+.signInForm-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+}
+
+.signInForm-primaryHeading {
+  margin-bottom: 1rem;
+}
+
+.signInForm-methodGoogle {
+  border-bottom: 1px dotted lightgray;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+.signInForm-description {
+  // margin-bottom: 1rem;
+}
+
+.signInForm-actions {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}

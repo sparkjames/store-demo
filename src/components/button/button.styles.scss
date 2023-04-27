@@ -1,20 +1,18 @@
 .button {
-  min-width: 165px;
+  min-width: 9em;
   width: auto;
-  height: 50px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 0 35px;
+  padding: .66em 1em;
   font-size: 15px;
   background-color: black;
   color: white;
-  text-transform: uppercase;
-  font-family: 'Open Sans Condensed';
-  font-weight: bolder;
-  border: none;
+  letter-spacing: .05em;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  border: 1px solid transparent;
   cursor: pointer;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: white;
@@ -30,7 +28,6 @@
 
   &:hover {
     background-color: #357ae8;
-    border: none;
   }
 }
 
