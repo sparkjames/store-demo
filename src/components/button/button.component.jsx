@@ -6,7 +6,7 @@ const buttonClassModifier = {
 };
 
 const Button = ({ children, buttonModifier, ...otherProps }) => {
-  console.log('otherProps = ', otherProps);
+  // console.log('otherProps = ', otherProps);
   return (
     <button className={`button ${buttonClassModifier[buttonModifier]}`} {...otherProps}>{children}</button>
   );
