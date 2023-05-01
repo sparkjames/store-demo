@@ -3,14 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './routes/home/home.component';
 import MainLayout from './routes/main-layout/main-layout.component.jsx';
 import Authentication from './routes/authentication/authentication.component';
+import Shop from './routes/shop/shop.component';
 
 // import './App.scss';
-
-const Shop = () => {
-  return (
-    <h1>Shop page</h1>
-  );
-}
 
 const App = () => {
   return (
