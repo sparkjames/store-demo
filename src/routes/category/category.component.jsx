@@ -1,6 +1,6 @@
 import './category.styles.scss';
 
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect, Fragment } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { CategoriesContext } from '../../contexts/categories.context';
@@ -17,11 +17,14 @@ const Category = () => {
   }, [category, categoriesMap]);
 
   return (
-    <div className='category'>
-      {
-        products && products.map( (product) => <ProductCard key={product.id} product={product} />)
-      }
-    </div>
+    <Fragment>
+      <h2 className='category-primaryHeading'>{category}</h2>
+      <div className='category'>
+        {
+          products && products.map( (product) => <ProductCard key={product.id} product={product} />)
+        }
+      </div>
+    </Fragment>
   );
 }
 
