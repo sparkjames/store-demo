@@ -1,4 +1,4 @@
-.category-image {
+.directory-item-image {
   display: block;
   height: 100%;
   left: 0;
@@ -11,7 +11,7 @@
   width: 100%;
 }
 
-.category {
+.directory-item {
   align-items: center;
   border: 1px solid black;
   display: flex;
@@ -26,12 +26,12 @@
   &:hover {
     cursor: pointer;
 
-    & .category-image {
+    & .directory-item-image {
       transform: scale(1.1);
       transition: transform 400ms cubic-bezier(0, 0.86, 0.46, 2);
     }
 
-    & .category-body-container {
+    & .directory-item-body-container {
       opacity: 0.9;
     }
   }
@@ -49,7 +49,7 @@
   }
 }
 
-.category-body {
+.directory-item-body {
   height: 90px;
   padding: 0 25px;
   display: flex;
@@ -62,14 +62,14 @@
   position: absolute;
 }
 
-.category-name {
+.directory-item-name {
   font-weight: bold;
   margin: 0 6px 0;
   font-size: 22px;
   color: #4a4a4a;
 }
 
-.category-description {
+.directory-item-description {
   font-weight: lighter;
   font-size: 16px;
 }
