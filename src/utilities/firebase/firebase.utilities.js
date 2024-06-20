@@ -1,5 +1,8 @@
 import { initializeApp } from 'firebase/app';
 
+// Your web app's Firebase configuration
+import { firebaseConfig } from './firebase.config';
+
 import {
   getAuth,
   signInWithRedirect,
@@ -21,16 +24,6 @@ import {
   query,
   getDocs,
 } from 'firebase/firestore';
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyA-rvIhFe_U0nakahNWxBalTOCjRKafSH4",
-  authDomain: "react-clothing-store-7985b.firebaseapp.com",
-  projectId: "react-clothing-store-7985b",
-  storageBucket: "react-clothing-store-7985b.appspot.com",
-  messagingSenderId: "181284933741",
-  appId: "1:181284933741:web:448f8f66bcb150b279af64"
-};
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
