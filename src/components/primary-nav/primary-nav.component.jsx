@@ -1,4 +1,5 @@
-import './primary-nav.styles.scss';
+// import './primary-nav.styles.scss';
+import { NavigationContainer, PrimaryNavItem, PrimaryNavLink, PrimaryNavList } from './primary-nav.styles';
 import { ReactComponent as CrwnLogo } from '../../assets/logo.svg';
 
 import { Link } from 'react-router-dom';
@@ -19,7 +20,40 @@ const PrimaryNavigation = () => {
   const { isCartOpen } = useContext(CartContext);
 
   return (
-    <nav className="primaryNav">
+    // <nav className="primaryNav">
+
+    //   <div className="logo-container">
+    //     <Link className="logo-link" to="/">
+    //       <CrwnLogo className='logo' />
+    //     </Link>
+    //   </div>
+
+    //   <ul className="primaryNav-list">
+
+    //     <li className="primaryNav-item">
+    //       <Link className="primaryNav-link" to="/shop">Shop</Link>
+    //     </li>
+
+    //     <li className="primaryNav-item">
+    //     {
+    //       currentUser ? (
+    //         <span className='primaryNav-link' onClick={signOutUser}>Sign Out</span>
+    //       ) : (
+
+    //         <Link className="primaryNav-link" to="/auth">Sign In</Link>
+    //       )
+    //     }
+    //     </li>
+
+    //     <li className="primaryNav-item">
+    //       <CartIcon />
+    //       {isCartOpen && <CartDropdown />}
+    //     </li>
+
+    //   </ul>
+
+    // </nav>
+    <NavigationContainer>
 
       <div className="logo-container">
         <Link className="logo-link" to="/">
@@ -27,31 +61,31 @@ const PrimaryNavigation = () => {
         </Link>
       </div>
 
-      <ul className="primaryNav-list">
+      <PrimaryNavList>
 
-        <li className="primaryNav-item">
-          <Link className="primaryNav-link" to="/shop">Shop</Link>
-        </li>
+        <PrimaryNavItem>
+          <PrimaryNavLink as="span" className="primaryNav-link" to="/shop">Shop</PrimaryNavLink>
+        </PrimaryNavItem>
 
-        <li className="primaryNav-item">
+        <PrimaryNavItem>
         {
           currentUser ? (
             <span className='primaryNav-link' onClick={signOutUser}>Sign Out</span>
           ) : (
 
-            <Link className="primaryNav-link" to="/auth">Sign In</Link>
+            <PrimaryNavLink as="span" className="primaryNav-link" to="/auth">Sign In</PrimaryNavLink>
           )
         }
-        </li>
+        </PrimaryNavItem>
 
-        <li className="primaryNav-item">
+        <PrimaryNavItem>
           <CartIcon />
           {isCartOpen && <CartDropdown />}
-        </li>
+        </PrimaryNavItem>
 
-      </ul>
+      </PrimaryNavList>
 
-    </nav>
+    </NavigationContainer>
   );
 }
 
