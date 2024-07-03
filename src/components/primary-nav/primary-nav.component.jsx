@@ -64,7 +64,7 @@ const PrimaryNavigation = () => {
       <PrimaryNavList>
 
         <PrimaryNavItem>
-          <PrimaryNavLink as="span" className="primaryNav-link" to="/shop">Shop</PrimaryNavLink>
+          <PrimaryNavLink className="primaryNav-link" to="/shop">Shop</PrimaryNavLink>
         </PrimaryNavItem>
 
         <PrimaryNavItem>
@@ -73,7 +73,7 @@ const PrimaryNavigation = () => {
             <span className='primaryNav-link' onClick={signOutUser}>Sign Out</span>
           ) : (
 
-            <PrimaryNavLink as="span" className="primaryNav-link" to="/auth">Sign In</PrimaryNavLink>
+            <PrimaryNavLink className="primaryNav-link" to="/auth">Sign In</PrimaryNavLink>
           )
         }
         </PrimaryNavItem>
