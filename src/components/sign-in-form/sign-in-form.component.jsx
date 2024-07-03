@@ -3,7 +3,7 @@ import './sign-in-form.scss';
 import { useState } from 'react';
 
 import FormInput from '../form-input/form-input.component';
-import Button from '../button/button.component';
+import Button, { BUTTON_MODIFIERS } from '../button/button.component';
 
 import {
   createUserDocumentFromAuth,
@@ -77,7 +77,7 @@ const SignInForm = () => {
       <h2 className="signInForm-primaryHeading">Already have an account?</h2>
 
       <div className="signInForm-methodGoogle">
-        <Button type="button" buttonModifier="highlight" onClick={signInWithGoogle}>Sign In With Google</Button>
+        <Button type="button" buttonModifier={BUTTON_MODIFIERS.highlight} onClick={signInWithGoogle}>Sign In With Google</Button>
       </div>
 
       <div className="signInForm-methodEmail">
@@ -90,7 +90,7 @@ const SignInForm = () => {
           <FormInput label="Password" id="signInForm-password" type="password" name="password" value={password} onChange={handleChange} required />
 
           <div className="signInForm-fieldGroup signInForm-actions">
-            <Button type="submit" buttonModifier="highlight">Sign In</Button>
+            <Button type="submit" buttonModifier={BUTTON_MODIFIERS.highlight}>Sign In</Button>
           </div>
 
         </form>

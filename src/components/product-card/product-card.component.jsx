@@ -4,7 +4,7 @@ import { useContext } from 'react';
 
 import { CartContext } from '../../contexts/cart.context';
 
-import Button from '../button/button.component';
+import Button, { BUTTON_MODIFIERS } from '../button/button.component';
 
 const ProductCard = ({product}) => {
 
@@ -22,7 +22,7 @@ const ProductCard = ({product}) => {
         <span className="product-card-name">{name}</span>
         <span className="product-card-price">{price}</span>
       </footer>
-      <Button buttonModifier="invert" onClick={addProductToCart}>Add to cart</Button>
+      <Button buttonModifier={BUTTON_MODIFIERS.inverted} onClick={addProductToCart}>Add to cart</Button>
     </div>
   );
 };
