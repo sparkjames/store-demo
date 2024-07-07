@@ -1,4 +1,5 @@
-import './sign-in-form.scss';
+// import './sign-in-form.styles.scss';
+import { SignInFormContainer, SignInFormPrimaryHeading, SignInFormMethodGoogle, SignInFormActions } from './sign-in-form.styles';
 
 import { useState } from 'react';
 
@@ -73,12 +74,12 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="signInForm-container">
-      <h2 className="signInForm-primaryHeading">Already have an account?</h2>
+    <SignInFormContainer>
+      <SignInFormPrimaryHeading>Already have an account?</SignInFormPrimaryHeading>
 
-      <div className="signInForm-methodGoogle">
+      <SignInFormMethodGoogle>
         <Button type="button" buttonModifier={BUTTON_MODIFIERS.highlight} onClick={signInWithGoogle}>Sign In With Google</Button>
-      </div>
+      </SignInFormMethodGoogle>
 
       <div className="signInForm-methodEmail">
         <p className="signInForm-description">or sign in with your email and password:</p>
@@ -89,14 +90,14 @@ const SignInForm = () => {
 
           <FormInput label="Password" id="signInForm-password" type="password" name="password" value={password} onChange={handleChange} required />
 
-          <div className="signInForm-fieldGroup signInForm-actions">
+          <SignInFormActions>
             <Button type="submit" buttonModifier={BUTTON_MODIFIERS.highlight}>Sign In</Button>
-          </div>
+          </SignInFormActions>
 
         </form>
       </div>
 
-    </div>
+    </SignInFormContainer>
   );
 }
 
