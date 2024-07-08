@@ -1,4 +1,5 @@
-import './sign-up-form.scss';
+// import './sign-up-form.scss';
+import { SignUpFormContainer, SignUpFormPrimaryHeading, SignUpFormDescription, SignUpFormActions } from  './sign-up-form';
 
 import { useState } from 'react';
 
@@ -59,9 +60,9 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="signUpForm-container">
-      <h2 className="signUpForm-primaryHeading">Don't have an account?</h2>
-      <p className="signUpForm-description">Sign up with your email as password:</p>
+    <SignUpFormContainer>
+      <SignUpFormPrimaryHeading>Don't have an account?</SignUpFormPrimaryHeading>
+      <SignUpFormDescription>Sign up with your email as password:</SignUpFormDescription>
 
       <form className="signUpForm" onSubmit={handleSubmit}>
 
@@ -73,13 +74,13 @@ const SignUpForm = () => {
 
         <FormInput label="Confirm Password" id="signUpForm-password2" type="password" name="password2" value={password2} onChange={handleChange} required />
 
-        <div className="signUpForm-fieldGroup signUpForm-actions">
+        <SignUpFormActions>
           <Button type="submit" buttonModifier="highlight">Register</Button>
-        </div>
+        </SignUpFormActions>
 
       </form>
 
-    </div>
+    </SignUpFormContainer>
   );
 }
 
