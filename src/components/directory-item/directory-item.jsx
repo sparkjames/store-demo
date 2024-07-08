@@ -1,15 +1,16 @@
-import './directory-item.styles.scss';
+// import './directory-item.styles.scss';
+import { DirectoryItemContainer, DirectoryItemImage, DirectoryItemBody, DirectoryItemName, DirectoryItemDescription } from './directory-item.styles';
 
 const DirectoryItem = ({category}) => {
   const {imageURL, title, description} = category;
   return (
-    <div className="directory-item">
-      <img className="directory-item-image" src={imageURL} alt={title} />
-      <div className="directory-item-body">
-        <h2 className="directory-item-name">{title}</h2>
-        <p className="directory-item-description">{description}</p>
-      </div>
-    </div>
+    <DirectoryItemContainer>
+      <DirectoryItemImage src={imageURL} alt={title} />
+      <DirectoryItemBody>
+        <DirectoryItemName>{title}</DirectoryItemName>
+        <DirectoryItemDescription>{description}</DirectoryItemDescription>
+      </DirectoryItemBody>
+    </DirectoryItemContainer>
   );
 }
 
