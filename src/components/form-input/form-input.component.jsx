@@ -1,13 +1,14 @@
-import './form-input.styles.scss';
+// import './form-input.styles.scss';
+import { SignUpFormFieldGroup, SignUpFormInput, SignUpFormLabel } from './form-input.styles';
 
 const FormInput = ({label, ...otherProps}) => {
   return (
-    <div className="signUpForm-fieldGroup">
-      <input className="signUpForm-input" {...otherProps} />
+    <SignUpFormFieldGroup>
+      <SignUpFormInput {...otherProps} />
       {label && (
-        <label htmlFor={otherProps?.id} className={`signUpForm-label ${otherProps.value.length ? 'signUpForm-label--shrink' : ''}`}>{label}</label>
+        <SignUpFormLabel htmlFor={otherProps?.id} shrink={otherProps.value.length}>{label}</SignUpFormLabel>
       )}
-    </div>
+    </SignUpFormFieldGroup>
   );
 }
 
